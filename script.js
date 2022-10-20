@@ -34,6 +34,7 @@ function checkGuess() {
         document.querySelector('.number').textContent = String(score);
         number = randomIntFromInterval(1, 20);
         document.querySelector('.score').textContent = '20';
+        return;
     }
     
     if (score === 0) {
