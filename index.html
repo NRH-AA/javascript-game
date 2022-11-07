@@ -5,31 +5,56 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script type="module" src="script.js"></script>
         <title>Guess The Number</title>
     </head>    
 
     <body>
         <div id="container">
-            <h1><u>Guess the number</u></h1>
-            
-            <p><strong>High Score</strong></p>
-            <div id="numberBox">
-                <h2 class="number">20</h2>
-            </div>
-            <br>
-            <input id="text" type="number" class="guess"><br>
-            <input id="submit" type="submit" value="Submit" class="submit">
-            
-            <p class="hint"></p>
-            
-            <div>
-                <h3>Score</h3>
-                <p class="score">20</p>
-            </div>
-            
+
+               
+               <div id="addPlayers">
+                    <div>
+                        <h3>Players</h3>
+                        <p id="showPlayers2"></p>
+                    </div>
+                
+                    <div>
+                        <fieldset>
+                            <legend>Add Player</legend>
+                                <p id="addPlayerError"></p>
+                                <label for="newPlayerName">Name:</label>
+                                <input id="newPlayerName" type="text" name="name"><br>
+                                <button id="submitPlayer">Add Player</button>
+                        </fieldset>
+                    </div>
+                    
+                    <div style="margin-top: 20px;">
+                        <button id="startGame">Play Game</button>
+                    </div> 
+               </div>
+               
+               
+               
+                <div id="game">
+                    <div>
+                        <h3>Players</h3>
+                        <p id="showPlayers"></p>
+                    </div>
+                    
+                    <h2>Guess the number!</h2>
+                    <h4 style="margin-bottom: 0px;" id="currentPlayer"></h4>
+                    <p id="currentPlayerHighScore"></p>
+                    <p id="currentPlayerScore"></p>
+                    
+                    
+                    <h4 id="hint"></h4>
+                    <input id="numberGuessed" type="number"><br>
+                    <button id="checkNumber">Check Number</button><br><br>
+                    <button id="restartGame">Reset Game</button>
+                </div>
+               
         </div>
-        
     </body>
 
 </html>
